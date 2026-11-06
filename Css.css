@@ -308,3 +308,9 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
     .header-contact { flex-direction: column; width: 100%; }
     .header-contact .phone-btn { width: 100%; text-align: center; }
 }
+/* Отключаем прилипающую шапку на телефонах, чтобы она не перекрывала контент */
+@media (max-width: 768px) {
+    .bunker-header {
+        position: relative; /* Шапка будет прокручиваться вместе с сайтом */
+    }
+}
