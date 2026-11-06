@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лесной Бункер - Отдых в Солотче</title>
+    <link rel="stylesheet" href="Css.css">
+</head>
+<body>
+
+    <!-- 1. ШАПКА -->
+    <header class="bunker-header">
+        <div class="logo">
+            <span class="logo-icon">🌲</span>
+            <div class="logo-text">
+                <h1>Лесной Бункер</h1>
+                <p>Солотча · Отдых и кафе</p>
+            </div>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="#menu">Меню кафе</a>
+            <a href="#rent-price">Прайс прокат</a>
+            <a href="#rent-promo">Акции прокат</a>
+            <a href="#enduro">Эндуро Туры</a>
+            <a href="#hotel">Гостиница/Домики</a>
+            <a href="#repair">Ремонт велосипедов</a>
+        </nav>
+
+        <!-- Соцсети и кнопка бронирования -->
+        <div class="header-actions">
+            <div class="social-header">
+                <a href="https://vk.ru/lesnoybunker" target="_blank" rel="noopener" class="social-icon vk" title="Мы во ВКонтакте">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.192c.136-.147.132-.423.132-.423s-.02-1.292.577-1.483c.587-.188 1.343 1.255 2.144 1.81.605.419 1.064.327 1.064.327l2.136-.03s1.117-.069.587-.947c-.043-.072-.308-.646-1.584-1.826-1.335-1.235-1.156-1.035.452-3.173.98-1.295 1.372-2.085 1.25-2.423-.117-.322-.842-.237-.842-.237l-2.405.015s-.178-.024-.31.055c-.128.077-.211.256-.211.256s-.377 1.003-.88 1.855c-1.062 1.836-1.486 1.933-1.66 1.819-.403-.261-.302-1.052-.302-1.614 0-1.754.266-2.484-.518-2.674-.26-.063-.45-.104-1.113-.11-.85-.008-1.57.003-1.978.202-.271.133-.48.43-.353.446.158.02.515.096.705.354.245.332.236 1.078.236 1.078s.14 2.035-.327 2.287c-.32.174-.76-.181-1.703-1.803-.484-.837-.85-1.763-.85-1.763s-.07-.172-.196-.265c-.151-.112-.363-.147-.363-.147l-2.286.015s-.343.01-.469.159c-.112.133-.009.407-.009.407s1.79 4.189 3.818 6.298c1.859 1.934 3.97 1.808 3.97 1.808h.956z"/></svg>
+                </a>
+                <a href="https://2gis.ru/ryazan/gallery/firm/70000001066938195/photoId/30258560186312167" target="_blank" rel="noopener" class="social-icon gis" title="Мы на 2ГИС">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </a>
+            </div>
+            <div class="header-contact">
+                <a href="tel:+70000000000" class="phone-btn">Забронировать</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. ГЛАВНЫЙ БАННЕР -->
+    <main>
+        <div class="hero-banner">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>Отдых в Солотче</h1>
+                <p>Вкусная еда, уютные домики и активный отдых в лесу</p>
+                <a href="#menu" class="hero-btn">Меню кафе</a>
+            </div>
+        </div>
+
+        <!-- 3. НАПРАВЛЕНИЯ (Карточки) -->
+        <section class="directions-section">
+            <h2 class="section-title">Что у нас есть?</h2>
+            <div class="directions-grid">
+                <div class="direction-card">
+                    <span class="card-icon">🍲</span>
+                    <h3>Кафе</h3>
+                    <p>Русская кухня, шашлыки на мангале и домашняя атмосфера.</p>
+                </div>
+                <div class="direction-card">
+                    <span class="card-icon">🚲</span>
+                    <h3>Прокат</h3>
+                    <p>Велосипеды, самокаты и ватрушки для зимних забав.</p>
+                </div>
+                <div class="direction-card">
+                    <span class="card-icon">🏡</span>
+                    <h3>Гостиница</h3>
+                    <p>Уютные домики и номера для отдыха на природе.</p>
+                </div>
+                <div class="direction-card">
+                    <span class="card-icon">🏍️</span>
+                    <h3>Эндуро Туры</h3>
+                    <p>Экстремальные поездки по лесным тропам на мотоциклах.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ПРЕИМУЩЕСТВА -->
+        <section class="features-section">
+            <h2 class="section-title">Почему выбирают нас?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span>✅</span>
+                    <p>В самом сердце Солотчи</p>
+                </div>
+                <div class="feature-item">
+                    <span>✅</span>
+                    <p>Своя парковка</p>
+                </div>
+                <div class="feature-item">
+                    <span>✅</span>
+                    <p>Свежий шашлык на мангале</p>
+                </div>
+                <div class="feature-item">
+                    <span>✅</span>
+                    <p>Велосипеды в аренду без залога</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. СЛАЙДЕР ФОТО -->
+        <section class="slider-section">
+            <h2 class="section-title">Наша атмосфера</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="https://avatars.mds.yandex.net/get-altay/947364/2a000001669f31026bfdac43269c8902c7bd/L" alt="Лесной Бункер 1">
+                    <img src="https://avatars.mds.yandex.net/get-altay/1433431/2a000001669f31153dae60abdc44f6f26949/L" alt="Лесной Бункер 2">
+                    <img src="https://avatars.mds.yandex.net/get-altay/1047383/2a000001669f310c00ea71d8114bebed4d92/L" alt="Лесной Бункер 3">
+                    <img src="https://avatars.mds.yandex.net/get-altay/1429587/2a000001669f3138ba9c5e896c5f50bb10cf/XXXL" alt="Лесной Бункер 4">
+                    <img src="https://avatars.mds.yandex.net/get-altay/16055577/2a0000019b8f48b7c0d0b8e27a86dde79f88/L" alt="Лесной Бункер 5">
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ОТЗЫВЫ -->
+        <section class="reviews-section">
+            <h2 class="section-title">Отзывы гостей</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"Отличное место, чтобы отдохнуть от города! Шашлык супер, персонал вежливый."</p>
+                    <span>— Анна, Москва</span>
+                </div>
+                <div class="review-card">
+                    <p>"Брали велосипеды на прокат, покатались по лесу — красота! Обязательно вернемся."</p>
+                    <span>— Дмитрий, Рязань</span>
+                </div>
+                <div class="review-card">
+                    <p>"Уютный домик, тишина и свежий воздух. Идеально для выходных с семьей."</p>
+                    <span>— Елена, Коломна</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. ПОДВАЛ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Лесной Бункер</h3>
+                <p>Рязанская область, Солотча, Монастырская площадь, 16</p>
+                <p>Телефон: +7 (000) 000-00-00</p>
+            </div>
+            <div class="footer-links">
+                <a href="#menu">Меню</a>
+                <a href="#rent">Прокат</a>
+                <a href="#hotel">Гостиница</a>
+            </div>
+            
+            <!-- Соцсети в подвале -->
+            <div class="footer-socials">
+                <a href="https://vk.ru/lesnoybunker" target="_blank" rel="noopener" class="social-icon vk" title="Мы во ВКонтакте">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.192c.136-.147.132-.423.132-.423s-.02-1.292.577-1.483c.587-.188 1.343 1.255 2.144 1.81.605.419 1.064.327 1.064.327l2.136-.03s1.117-.069.587-.947c-.043-.072-.308-.646-1.584-1.826-1.335-1.235-1.156-1.035.452-3.173.98-1.295 1.372-2.085 1.25-2.423-.117-.322-.842-.237-.842-.237l-2.405.015s-.178-.024-.31.055c-.128.077-.211.256-.211.256s-.377 1.003-.88 1.855c-1.062 1.836-1.486 1.933-1.66 1.819-.403-.261-.302-1.052-.302-1.614 0-1.754.266-2.484-.518-2.674-.26-.063-.45-.104-1.113-.11-.85-.008-1.57.003-1.978.202-.271.133-.48.43-.353.446.158.02.515.096.705.354.245.332.236 1.078.236 1.078s.14 2.035-.327 2.287c-.32.174-.76-.181-1.703-1.803-.484-.837-.85-1.763-.85-1.763s-.07-.172-.196-.265c-.151-.112-.363-.147-.363-.147l-2.286.015s-.343.01-.469.159c-.112.133-.009.407-.009.407s1.79 4.189 3.818 6.298c1.859 1.934 3.97 1.808 3.97 1.808h.956z"/></svg>
+                </a>
+                <a href="https://2gis.ru/ryazan/gallery/firm/70000001066938195/photoId/30258560186312167" target="_blank" rel="noopener" class="social-icon gis" title="Мы на 2ГИС">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Лесной Бункер. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

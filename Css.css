@@ -1,0 +1,279 @@
+/* =========================================
+   1. ГЛОБАЛЬНЫЙ СБРОС И БАЗА
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Заголовки секций */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #2e4a35;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #d4a373;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* =========================================
+   2. ШАПКА САЙТА (HEADER)
+   ========================================= */
+.bunker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #2e4a35;
+    color: #f4f1ea;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon { font-size: 32px; }
+.logo-text h1 { margin: 0; font-size: 22px; font-weight: bold; letter-spacing: 1px; }
+.logo-text p { margin: 0; font-size: 12px; color: #b3c9b8; text-transform: uppercase; letter-spacing: 1px; }
+
+.nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: center; }
+.nav-links a {
+    color: #f4f1ea; text-decoration: none; font-size: 14px;
+    font-weight: 500; transition: color 0.3s; position: relative; padding: 5px 0;
+}
+.nav-links a:hover { color: #d4a373; }
+.nav-links a::after {
+    content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0;
+    background-color: #d4a373; transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:not(:last-child)::before {
+    content: '|'; position: absolute; right: -10px; color: #4a6b52; font-weight: normal;
+}
+
+/* Блок с кнопкой и иконками в шапке */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-contact .phone-btn {
+    background-color: #d4a373; color: #2e4a35; padding: 10px 20px;
+    border-radius: 5px; text-decoration: none; font-weight: bold;
+    font-size: 15px; transition: background-color 0.3s, transform 0.2s;
+}
+.header-contact .phone-btn:hover { background-color: #c28c55; transform: scale(1.05); }
+
+/* =========================================
+   3. СОЦИАЛЬНЫЕ ИКОНКИ (ВК и 2ГИС)
+   ========================================= */
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #444;
+    color: white;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.social-icon.vk:hover {
+    background-color: #0077FF;
+    transform: translateY(-3px);
+}
+
+.social-icon.gis:hover {
+    background-color: #00A650;
+    transform: translateY(-3px);
+}
+
+.footer-socials .social-icon {
+    width: 45px;
+    height: 45px;
+}
+.footer-socials .social-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* =========================================
+   4. ГЛАВНЫЙ БАННЕР (HERO)
+   ========================================= */
+.hero-banner {
+    position: relative; width: 100%; height: 70vh; min-height: 400px;
+    display: flex; justify-content: center; align-items: center;
+    text-align: center; overflow: hidden;
+}
+.hero-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://avatars.mds.yandex.net/get-altay/947364/2a000001669f31026bfdac43269c8902c7bd/L');
+    background-size: cover; background-position: center; z-index: 1;
+}
+.hero-bg::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero-content { position: relative; z-index: 2; color: white; padding: 20px; max-width: 800px; }
+.hero-content h1 { font-size: 56px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.hero-content p { font-size: 22px; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+.hero-btn {
+    display: inline-block; background-color: #d4a373; color: #2e4a35;
+    padding: 15px 40px; font-size: 18px; font-weight: bold; text-decoration: none;
+    border-radius: 8px; transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.hero-btn:hover { background-color: #c28c55; transform: scale(1.05); }
+
+/* =========================================
+   5. НАПРАВЛЕНИЯ (КАРТОЧКИ)
+   ========================================= */
+.directions-section { padding: 80px 20px; background-color: #fff; }
+.directions-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto;
+}
+.direction-card {
+    background: #f9f9f9; padding: 30px; border-radius: 15px; text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee;
+}
+.direction-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.card-icon { font-size: 48px; display: block; margin-bottom: 15px; }
+.direction-card h3 { font-size: 22px; color: #2e4a35; margin-bottom: 10px; }
+.direction-card p { color: #666; line-height: 1.6; }
+
+/* =========================================
+   6. ПРЕИМУЩЕСТВА
+   ========================================= */
+.features-section { padding: 60px 20px; background-color: #2e4a35; }
+.features-section .section-title { color: #fff; }
+.features-section .section-title::after { background-color: #d4a373; }
+.features-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; max-width: 1000px; margin: 0 auto;
+}
+.feature-item {
+    display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.1);
+    padding: 20px; border-radius: 10px; color: #fff;
+}
+.feature-item span { font-size: 24px; }
+
+/* =========================================
+   7. СЛАЙДЕР ФОТОГРАФИЙ
+   ========================================= */
+.slider-section { padding: 80px 20px; background-color: #f4f4f4; }
+.slider-container {
+    width: 100%; max-width: 1000px; height: 60vh; min-height: 400px;
+    margin: 0 auto; overflow: hidden; border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); position: relative;
+}
+.slider {
+    display: flex; width: 500%; height: 100%;
+    animation: slideAnimation 25s infinite;
+}
+.slider img {
+    width: 20%; height: 100%; object-fit: cover; object-position: center; flex-shrink: 0;
+}
+@keyframes slideAnimation {
+    0%, 16% { transform: translateX(0); }
+    20%, 36% { transform: translateX(-20%); }
+    40%, 56% { transform: translateX(-40%); }
+    60%, 76% { transform: translateX(-60%); }
+    80%, 96% { transform: translateX(-80%); }
+    100% { transform: translateX(0); }
+}
+
+/* =========================================
+   8. ОТЗЫВЫ
+   ========================================= */
+.reviews-section { padding: 80px 20px; background-color: #fff; }
+.reviews-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto;
+}
+.review-card {
+    background: #f9f9f9; padding: 30px; border-radius: 15px;
+    border-left: 5px solid #d4a373; font-style: italic;
+}
+.review-card p { color: #555; margin-bottom: 15px; line-height: 1.6; }
+.review-card span { font-weight: bold; color: #2e4a35; font-style: normal; }
+
+/* =========================================
+   9. ПОДВАЛ (FOOTER)
+   ========================================= */
+footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: auto; }
+.footer-content {
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    max-width: 1200px; margin: 0 auto; padding: 0 20px 40px;
+    gap: 30px;
+}
+.footer-info h3 { color: #fff; font-size: 24px; margin-bottom: 15px; }
+.footer-info p { margin-bottom: 8px; font-size: 15px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: #ccc; text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: #d4a373; }
+.footer-bottom {
+    background-color: #111; text-align: center; padding: 20px;
+    font-size: 13px; border-top: 1px solid #333;
+}
+
+/* =========================================
+   10. АДАПТИВНОСТЬ (Для телефонов)
+   ========================================= */
+@media (max-width: 992px) {
+    .bunker-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-links { justify-content: center; }
+    .nav-links a:not(:last-child)::before { display: none; }
+    .header-actions { width: 100%; justify-content: center; margin-top: 5px; }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 36px; }
+    .hero-content p { font-size: 16px; }
+    .section-title { font-size: 26px; }
+    .footer-content { flex-direction: column; text-align: center; align-items: center; }
+    .footer-links { align-items: center; }
+}
