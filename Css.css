@@ -78,12 +78,27 @@ body {
     gap: 20px;
 }
 
+.header-contact {
+    display: flex;
+    gap: 10px;
+}
+
 .header-contact .phone-btn {
     background-color: #d4a373; color: #2e4a35; padding: 10px 20px;
     border-radius: 5px; text-decoration: none; font-weight: bold;
-    font-size: 15px; transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px; transition: background-color 0.3s, transform 0.2s;
+    white-space: nowrap;
 }
 .header-contact .phone-btn:hover { background-color: #c28c55; transform: scale(1.05); }
+
+/* Стиль для кнопки Кафе */
+.cafe-btn {
+    background-color: #e6c8a0 !important; 
+    color: #2e4a35 !important;
+}
+.cafe-btn:hover {
+    background-color: #d4a373 !important;
+}
 
 /* =========================================
    3. СОЦИАЛЬНЫЕ ИКОНКИ (ВК и 2ГИС)
@@ -248,9 +263,23 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
 }
 .footer-info h3 { color: #fff; font-size: 24px; margin-bottom: 15px; }
 .footer-info p { margin-bottom: 8px; font-size: 15px; }
-.footer-links { display: flex; flex-direction: column; gap: 10px; }
-.footer-links a { color: #ccc; text-decoration: none; transition: color 0.3s; }
-.footer-links a:hover { color: #d4a373; }
+
+/* Контакты в подвале */
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+}
+.footer-contacts a {
+    color: #d4a373;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-contacts a:hover {
+    color: #fff;
+}
+
 .footer-bottom {
     background-color: #111; text-align: center; padding: 20px;
     font-size: 13px; border-top: 1px solid #333;
@@ -259,7 +288,7 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
 /* =========================================
    10. АДАПТИВНОСТЬ (Для телефонов)
    ========================================= */
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     .bunker-header {
         flex-direction: column;
         gap: 15px;
@@ -267,7 +296,7 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
     }
     .nav-links { justify-content: center; }
     .nav-links a:not(:last-child)::before { display: none; }
-    .header-actions { width: 100%; justify-content: center; margin-top: 5px; }
+    .header-actions { width: 100%; justify-content: center; margin-top: 5px; flex-wrap: wrap;}
 }
 
 @media (max-width: 768px) {
@@ -276,4 +305,6 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
     .section-title { font-size: 26px; }
     .footer-content { flex-direction: column; text-align: center; align-items: center; }
     .footer-links { align-items: center; }
+    .header-contact { flex-direction: column; width: 100%; }
+    .header-contact .phone-btn { width: 100%; text-align: center; }
 }
