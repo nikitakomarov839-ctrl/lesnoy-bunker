@@ -46,7 +46,7 @@ body {
     background-color: #2e4a35;
     color: #f4f1ea;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    position: sticky;
+    position: relative; /* Убрали sticky, теперь по умолчанию шапка обычная */
     top: 0;
     z-index: 100;
 }
@@ -299,7 +299,12 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
     .header-actions { width: 100%; justify-content: center; margin-top: 5px; flex-wrap: wrap;}
 }
 
+/* Жесткое правило для мобилок, чтобы шапка не липла */
 @media (max-width: 768px) {
+    .bunker-header {
+        position: static !important; /* !important заставляет браузер точно применить это правило */
+    }
+    
     .hero-content h1 { font-size: 36px; }
     .hero-content p { font-size: 16px; }
     .section-title { font-size: 26px; }
@@ -307,10 +312,4 @@ footer { background-color: #1a1a1a; color: #ccc; padding-top: 50px; margin-top: 
     .footer-links { align-items: center; }
     .header-contact { flex-direction: column; width: 100%; }
     .header-contact .phone-btn { width: 100%; text-align: center; }
-}
-/* Отключаем прилипающую шапку на телефонах, чтобы она не перекрывала контент */
-@media (max-width: 768px) {
-    .bunker-header {
-        position: relative; /* Шапка будет прокручиваться вместе с сайтом */
-    }
 }
